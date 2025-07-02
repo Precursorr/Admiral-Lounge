@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admiral Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="neon-grid">
+        <!-- Animated neon lines background -->
+        <div class="neon-line horizontal line-1"></div>
+        <div class="neon-line horizontal line-2"></div>
+        <div class="neon-line vertical line-3"></div>
+        <div class="neon-line vertical line-4"></div>
+        <div class="neon-line diagonal line-5"></div>
+        <div class="neon-line diagonal line-6"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title">Admiral Lounge</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-border"></div>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Admiral Lounge, your one stop shop for everying Nova: Space Armada!</h1>
+                <p class="hero-description">
+                    Welcome!<br><br>
+                    Nova: Space Armada is a strategic sci-fi game that puts you in command of powerful space fleets in a vast, dynamic galaxy. Known for its exceptional and in-depth fleet building options, the game challenges players to think tactically and build the ultimate armada.<br><br>
+
+                    In this guide, you'll find:<br><br>
+
+                    Core Game Information – Learn what Nova: Space Armada is all about.<br><br>
+
+                    Fleet Build Options – Explore different ways to construct your fleet for maximum efficiency.<br><br>
+
+                    Advanced Fleet Build Tips – Discover expert strategies to give you the edge in battle.<br><br>
+
+                    Prepare for deep strategy, high-stakes space warfare, and endless customization.
+                </p>
+
+            </div>
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="neon-frame">
+                        <div class="frame-content">
+                            <div class="pulse-circle">
+                                <button class="begin-button" onclick="showOptions()">BEGIN</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="options" class="options-section" style="display: none;">
+                        <div class="options-container">
+                            <div class="option-card" onclick="selectOption('core-info')">
+                                <div class="option-icon">
+                                    <div class="icon-core"></div>
+                                </div>
+                                <h3>Core Game Information</h3>
+                            </div>
+
+                            <div class="option-card" onclick="selectOption('fleet-builds')">
+                                <div class="option-icon">
+                                    <div class="icon-fleet"></div>
+                                </div>
+                                <h3>Fleet Builder</h3>
+                            </div>
+
+                            <div class="option-card" onclick="selectOption('advanced-tips')">
+                                <div class="option-icon">
+                                    <div class="icon-advanced"></div>
+                                </div>
+                                <h3>Advanced Fleet Tips</h3>
+                            </div>
+
+                            <div class="option-card" onclick="selectOption('ship-manual')">
+                                <div class="option-icon">
+                                    <div class="icon-tactical"></div>
+                                </div>
+                                <h3>Ship Manual</h3>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>

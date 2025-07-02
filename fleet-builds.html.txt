@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Build Options - Admiral Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="neon-grid">
+        <!-- Animated neon lines background -->
+        <div class="neon-line horizontal line-1"></div>
+        <div class="neon-line horizontal line-2"></div>
+        <div class="neon-line vertical line-3"></div>
+        <div class="neon-line vertical line-4"></div>
+        <div class="neon-line diagonal line-5"></div>
+        <div class="neon-line diagonal line-6"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title">Admiral Lounge</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="core-info.html">Core Info</a></li>
+                    <li><a href="fleet-builds.html">Fleet Builds</a></li>
+                    <li><a href="advanced-tips.html">Advanced Tips</a></li>
+                    <li><a href="tactical-warfare.html">Tactical Warfare</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-border"></div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-page">
+            <div class="page-header">
+                <h1 class="page-title">Fleet Build Options</h1>
+                <p class="page-description">Play around with fleet build ideas and plan ahead for your future</p>
+
+                <!-- Fleet Options -->
+                <div class="fleet-options">
+                    <button class="fleet-option active" onclick="selectFleet(1)" data-fleet="1">Fleet 1</button>
+                    <button class="fleet-option" onclick="selectFleet(2)" data-fleet="2">Fleet 2</button>
+                    <button class="fleet-option" onclick="selectFleet(3)" data-fleet="3">Fleet 3</button>
+                    <button class="fleet-option" onclick="selectFleet(4)" data-fleet="4">Fleet 4</button>
+                    <button class="fleet-option" onclick="selectFleet(5)" data-fleet="5">Fleet 5</button>
+                    <button class="fleet-option" onclick="selectFleet(6)" data-fleet="6">Fleet 6</button>
+                </div>
+
+                <!-- Admiral Selection Display -->
+                <div id="selected-admiral" class="selected-admiral" style="display: none;">
+                    <img id="admiral-image" src="" alt="Selected Admiral" class="admiral-image">
+                </div>
+            </div>
+
+            <!-- Fleet Content Sections -->
+            <div class="fleet-content">
+                <div id="fleet-1" class="fleet-section active">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+
+                    <!-- Sho Wu Configuration Sections -->
+                    <div id="sho-wu-config" class="sho-wu-configuration" style="display: none;">
+                        <div class="config-container">
+                            <!-- Left Section - 1/4 width -->
+                            <div class="left-section">
+                                <div class="box-row">
+                                    <div class="config-box"></div>
+                                    <div class="config-box"></div>
+                                </div>
+                                <div class="box-row">
+                                    <div class="config-box"></div>
+                                    <div class="config-box"></div>
+                                </div>
+                                <div class="box-row">
+                                    <div class="config-box"></div>
+                                    <div class="config-box"></div>
+                                </div>
+                                <div class="box-row">
+                                    <div class="config-box"></div>
+                                    <div class="config-box"></div>
+                                </div>
+                                <div class="box-row">
+                                    <div class="config-box single"></div>
+                                </div>
+                            </div>
+
+                            <!-- Right Section - 3/4 width -->
+                            <div class="right-section">
+                                <!-- First line - 3 boxes -->
+                                <div class="box-row">
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                </div>
+                                <!-- Second line - 1 box -->
+                                <div class="box-row">
+                                    <div class="config-box single">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                </div>
+                                <!-- Third line - 1 box -->
+                                <div class="box-row">
+                                    <div class="config-box single">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                </div>
+                                <!-- Fourth line - 4 boxes -->
+                                <div class="box-row">
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                    <div class="config-box">
+                                        <div class="plus-icon" onclick="addShip(this)">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fleet-2" class="fleet-section">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+                </div>
+
+                <div id="fleet-3" class="fleet-section">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+                </div>
+
+                <div id="fleet-4" class="fleet-section">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+                </div>
+
+                <div id="fleet-5" class="fleet-section">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+                </div>
+
+                <div id="fleet-6" class="fleet-section">
+                    <button class="choose-admiral-btn" onclick="openAdmiralModal()">Choose Admiral</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admiral Selection Modal -->
+        <div id="admiral-modal" class="admiral-modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Choose Admiral</h3>
+                    <button class="close-modal" onclick="closeAdmiralModal()">&times;</button>
+                </div>
+                <div class="admiral-grid">
+                    <div class="admiral-option" onclick="selectAdmiral('admiral1.jpg', 'Sho Wu')">
+                        <div class="admiral-placeholder">Sho Wu</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral2.jpg', 'Admiral Nova')">
+                        <div class="admiral-placeholder">Admiral 2</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral3.jpg', 'Admiral Orion')">
+                        <div class="admiral-placeholder">Admiral 3</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral4.jpg', 'Admiral Stellar')">
+                        <div class="admiral-placeholder">Admiral 4</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral5.jpg', 'Admiral Cosmos')">
+                        <div class="admiral-placeholder">Admiral 5</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral6.jpg', 'Admiral Galaxy')">
+                        <div class="admiral-placeholder">Admiral 6</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral7.jpg', 'Admiral Nebula')">
+                        <div class="admiral-placeholder">Admiral 7</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral8.jpg', 'Admiral Quasar')">
+                        <div class="admiral-placeholder">Admiral 8</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral9.jpg', 'Admiral Pulsar')">
+                        <div class="admiral-placeholder">Admiral 9</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral10.jpg', 'Admiral Comet')">
+                        <div class="admiral-placeholder">Admiral 10</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral11.jpg', 'Admiral Meteor')">
+                        <div class="admiral-placeholder">Admiral 11</div>
+                    </div>
+                    <div class="admiral-option" onclick="selectAdmiral('admiral12.jpg', 'Admiral Astro')">
+                        <div class="admiral-placeholder">Admiral 12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>
